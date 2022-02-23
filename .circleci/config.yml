@@ -8,17 +8,17 @@ workflows:
             - dockerhub
 
 jobs:
- build:
-   machine: true
+  build:
+    machine: true
     docker:
       - auth:
           username: $DOCKER_USER
           password: $DOCKER_PASS
-   steps:
-     - checkout
+    steps:
+      - checkout
 
-     # build the application image
-     - run: docker build -t seanhess/haskell:18.25 .
+      # build the application image
+      - run: docker build -t seanhess/haskell:18.25 .
 
-     # deploy the image
-     - run: docker push seanhess/haskell:18.25
+      # deploy the image
+      - run: docker push seanhess/haskell:18.25
