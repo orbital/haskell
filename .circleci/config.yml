@@ -1,11 +1,21 @@
 version: 2
+
+workflows:
+  my-workflow:
+    jobs:
+      - build:
+          context:
+            - dockerhub
+
 jobs:
  build:
    machine: true
+    docker:
+      - auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASS
    steps:
      - checkout
-     - run: |
-         echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
 
      # build the application image
      - run: docker build -t seanhess/haskell:18.25 .
