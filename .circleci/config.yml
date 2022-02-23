@@ -8,7 +8,7 @@ jobs:
          echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
 
      # build the application image
-     - run: docker build -t seanhess/haskell:18.25
+     - run: docker build -t seanhess/haskell:18.25 .
 
      # deploy the image
      - run: docker push seanhess/haskell:18.25
