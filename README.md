@@ -1,2 +1,1 @@
-# haskell
-Haskell Tools
+# haskell-base

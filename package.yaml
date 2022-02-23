@@ -1,0 +1,85 @@
+name:                haskell-base
+version:             0.1.0.0
+github:              "orbital/haskell"
+license:             BSD3
+author:              "Sean Hess"
+maintainer:          "example@example.com"
+copyright:           "2022 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/haskell-base#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson
+- casing
+- aws-lambda-haskell-runtime
+- aws-lambda-haskell-runtime-wai
+- envy
+- bytestring
+- containers
+- conduit
+- directory
+- lens
+- lucid
+- filepath
+- file-embed
+- mtl
+- http-types
+- record-hasfield
+- record-dot-preprocessor
+- JuicyPixels
+- base64-bytestring
+- safe
+- scotty
+- scotty-cookie
+- string-conversions
+- text
+- time
+- wai
+- wai-middleware-static
+- warp
+- uuid
+- stm
+- raw-strings-qq
+- dynamodb-simple
+- safe-exceptions
+- amazonka-dynamodb
+- amazonka
+- tagged
+- random
+
+library:
+  source-dirs: src
+
+executables:
+  haskell-base-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-base
+
+tests:
+  haskell-base-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-base
