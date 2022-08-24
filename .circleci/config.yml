@@ -1,24 +1,14 @@
-version: 2.1
-
-workflows:
-  my-workflow:
-    jobs:
-      - build:
-          context:
-            - dockerhub
-
+version: 2
 jobs:
-  build:
-    machine: true
-    docker:
-      - auth:
-          username: $DOCKER_USER
-          password: $DOCKER_PASS
-    steps:
-      - checkout
+ build:
+   machine: true
+   steps:
+     - checkout
+     - run: |
+         echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
 
-      # build the application image
-      - run: docker build -t seanhess/haskell:18.25 .
+     # build the application image
+     - run: docker build -t seanhess/haskell:$CIRCLE_BRANCH .
 
-      # deploy the image
-      - run: docker push seanhess/haskell:18.25
+     # deploy the image
+     - run: docker push seanhess/haskell:$CIRCLE_BRANCH
