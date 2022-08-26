@@ -40,6 +40,8 @@ packages:
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
 extra-deps:
+- git: https://github.com/seanhess/juniper.git
+  commit: 269640f54fdc536c5b19f0240695e07e26828ef2
 - aws-lambda-haskell-runtime-4.1.1
 - aws-lambda-haskell-runtime-wai-2.0.2
 - safe-exceptions-checked-0.1.0

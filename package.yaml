@@ -38,6 +38,7 @@ dependencies:
 - http-types
 - record-hasfield
 - record-dot-preprocessor
+- juniper
 - JuicyPixels
 - base64-bytestring
 - safe

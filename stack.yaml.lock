@@ -5,6 +5,17 @@
 
 packages:
 - completed:
+    name: juniper
+    version: 0.2.3
+    git: https://github.com/seanhess/juniper.git
+    pantry-tree:
+      size: 2556
+      sha256: 5f776746cdf4a62f8080811d576000ea984182163476718010fb1db6ebb5f247
+    commit: 269640f54fdc536c5b19f0240695e07e26828ef2
+  original:
+    git: https://github.com/seanhess/juniper.git
+    commit: 269640f54fdc536c5b19f0240695e07e26828ef2
+- completed:
     hackage: aws-lambda-haskell-runtime-4.1.1@sha256:c3b3452d3a7f36950c22760fe44b51d49b43624fa3a0253e5bfc3d94809bb8fd,3024
     pantry-tree:
       size: 1453

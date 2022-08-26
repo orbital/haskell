@@ -1,6 +1,6 @@
-FROM fpco/stack-build:lts-18.25 as base
-RUN mkdir -p /opt/build/base
-WORKDIR /opt/build/base
-COPY . /opt/build/base
+FROM fpco/stack-build:lts-18.25
+RUN mkdir -p /opt/base
+WORKDIR /opt/base
+COPY . /opt/base
 
 RUN stack build --only-dependencies --system-ghc

@@ -49,6 +49,7 @@ library
     , file-embed
     , filepath
     , http-types
+    , juniper
     , lens
     , lucid
     , mtl
@@ -98,6 +99,7 @@ executable haskell-base-exe
     , filepath
     , haskell-base
     , http-types
+    , juniper
     , lens
     , lucid
     , mtl
@@ -148,6 +150,7 @@ test-suite haskell-base-test
     , filepath
     , haskell-base
     , http-types
+    , juniper
     , lens
     , lucid
     , mtl
